@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: data-micro
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8080
+  datasource:
+    url: jdbc:postgresql://localhost:7896/db_pasiport
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
