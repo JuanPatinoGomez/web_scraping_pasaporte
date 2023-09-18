@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="web-scraping-pasaportes" />
+        <module name="config-service" />
+        <module name="mediator-micro-serv" />
+        <module name="data-micro-serv" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="config-service" target="17" />
+      <module name="data-micro-serv" target="17" />
+      <module name="mediator-micro-serv" target="17" />
+      <module name="web-scraping-pasaportes" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="config-service" options="-parameters" />
+      <module name="data-micro-serv" options="-parameters" />
+      <module name="mediator-micro-serv" options="-parameters" />
+      <module name="web-scraping-pasaportes" options="-parameters" />
+    </option>
+  </component>
+</project>
