@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="eureka-service" />
         <module name="web-scraping-pasaportes" />
         <module name="config-service" />
         <module name="mediator-micro-serv" />
@@ -15,6 +16,7 @@
     <bytecodeTargetLevel>
       <module name="config-service" target="17" />
       <module name="data-micro-serv" target="17" />
+      <module name="eureka-service" target="17" />
       <module name="mediator-micro-serv" target="17" />
       <module name="web-scraping-pasaportes" target="17" />
     </bytecodeTargetLevel>
@@ -23,6 +25,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="config-service" options="-parameters" />
       <module name="data-micro-serv" options="-parameters" />
+      <module name="eureka-service" options="-parameters" />
       <module name="mediator-micro-serv" options="-parameters" />
       <module name="web-scraping-pasaportes" options="-parameters" />
     </option>
