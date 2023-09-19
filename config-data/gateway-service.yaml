@@ -23,7 +23,7 @@ spring:
         - id: mediator-micro-serv
           uri: lb://mediator-micro-serv
           predicates:
-            - Path=/api/mediator-micro-serv**
+            - Path=/api/mediator-micro-serv/**
         - id: web-scraping
           uri: lb://web-scraping
           predicates:
