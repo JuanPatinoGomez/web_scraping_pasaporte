@@ -1,0 +1,30 @@
+server:
+  port: 8088
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: http://localhost:8761/eureka
+    instance:
+      hostname: localhost
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+        routes:
+          - id: data-micro
+            uri: lb://data-micro
+            predicates:
+              - Path=/api/**
+          - id: mediator-micro-serv
+              uri: lb://mediator-micro-serv
+              predicates:
+                - Path=/api/**
+          - id: web-scraping
+              uri: lb://web-scraping
+              predicates:
+                - Path=/api/**
