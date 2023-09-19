@@ -15,16 +15,16 @@ spring:
       discovery:
         locator:
           enabled: true
-        routes:
-          - id: data-micro
-            uri: lb://data-micro
-            predicates:
-              - Path=/api/**
-          - id: mediator-micro-serv
-              uri: lb://mediator-micro-serv
-              predicates:
-                - Path=/api/**
-          - id: web-scraping
-              uri: lb://web-scraping
-              predicates:
-                - Path=/api/**
+      routes:
+        - id: data-micro
+          uri: lb://data-micro
+          predicates:
+            - Path=/api/**
+        - id: mediator-micro-serv
+          uri: lb://mediator-micro-serv
+          predicates:
+            - Path=/api/**
+        - id: web-scraping
+          uri: lb://web-scraping
+          predicates:
+            - Path=/api/**
