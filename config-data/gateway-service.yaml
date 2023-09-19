@@ -19,12 +19,12 @@ spring:
         - id: data-micro
           uri: lb://data-micro
           predicates:
-            - Path=/api/**
+            - Path=/api/data-micro/**
         - id: mediator-micro-serv
           uri: lb://mediator-micro-serv
           predicates:
-            - Path=/api/**
+            - Path=/api/mediator-micro-serv**
         - id: web-scraping
           uri: lb://web-scraping
           predicates:
-            - Path=/api/**
+            - Path=/api/web-scraping/**
