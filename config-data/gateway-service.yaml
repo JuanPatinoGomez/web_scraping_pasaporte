@@ -19,7 +19,7 @@ spring:
         - id: data-micro
           uri: lb://data-micro
           predicates:
-            - Path=/api/data-micro/**
+            - Path=/api/consultasCitasPasaportes/**
         - id: mediator-micro-serv
           uri: lb://mediator-micro-serv
           predicates:
