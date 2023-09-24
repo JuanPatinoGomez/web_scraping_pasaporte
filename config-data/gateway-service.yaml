@@ -17,14 +17,14 @@ spring:
           enabled: true
       routes:
         - id: data-micro
-          uri: lb://data-micro
+          uri: lb://data
           predicates:
-            - Path=/api/consultasCitasPasaportes/**
+            - Path=/data/**
         - id: mediator-micro-serv
-          uri: lb://mediator-micro-serv
+          uri: lb://mediator
           predicates:
-            - Path=/api/consultasCitasPasaportes/**
+            - Path=/mediator/**
         - id: web-scraping
           uri: lb://web-scraping
           predicates:
-            - Path=/api/web-scraping/**
+            - Path=/web-scraping/**
