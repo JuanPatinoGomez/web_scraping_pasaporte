@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @SpringBootApplication
-@RequestMapping("/mediator")
+@RequestMapping("/mediator-micro-serv")
 public class MediatorMicroServApplication {
 
 	public static void main(String[] args) {
