@@ -18,21 +18,21 @@ public class ConsultasCitasPasaportesController {
 
     @GetMapping()
     public List<ConsultasCitasPasaportes> findAll(){
-        return Arrays.asList(Objects.requireNonNull(restTemplate.getForObject("http://data/api/consultasCitasPasaportes", ConsultasCitasPasaportes[].class)));
+        return Arrays.asList(Objects.requireNonNull(restTemplate.getForObject("http://data-micro/api/consultasCitasPasaportes", ConsultasCitasPasaportes[].class)));
     }
 
     @GetMapping("/{id}")
     public ConsultasCitasPasaportes findById(@PathVariable Integer id){
-        return restTemplate.getForObject("http://data/api/consultasCitasPasaportes/" + id, ConsultasCitasPasaportes.class);
+        return restTemplate.getForObject("http://data-micro/api/consultasCitasPasaportes/" + id, ConsultasCitasPasaportes.class);
     }
 
     @GetMapping("/enabled")
     public List<ConsultasCitasPasaportes> findAllByIndicadorHabilitadoIsTrue(){
-        return Arrays.asList(Objects.requireNonNull(restTemplate.getForObject("http://data/api/consultasCitasPasaportes/enabled", ConsultasCitasPasaportes[].class)));
+        return Arrays.asList(Objects.requireNonNull(restTemplate.getForObject("http://data-micro/api/consultasCitasPasaportes/enabled", ConsultasCitasPasaportes[].class)));
     }
 
     @PostMapping()
     public ConsultasCitasPasaportes create(@RequestBody ConsultasCitasPasaportes o){
-        return restTemplate.postForObject("http:/data/api/consultasCitasPasaportes", o, ConsultasCitasPasaportes.class);
+        return restTemplate.postForObject("http:/data-micro/api/consultasCitasPasaportes", o, ConsultasCitasPasaportes.class);
     }
 }

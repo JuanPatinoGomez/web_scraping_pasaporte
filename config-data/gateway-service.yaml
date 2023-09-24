@@ -17,11 +17,11 @@ spring:
           enabled: true
       routes:
         - id: data-micro
-          uri: lb://data
+          uri: lb://data-micro
           predicates:
-            - Path=/data/**
+            - Path=/data-micro/**
         - id: mediator-micro-serv
-          uri: lb://mediator
+          uri: lb://mediator-micro-serv
           predicates:
             - Path=/mediator/**
         - id: web-scraping
