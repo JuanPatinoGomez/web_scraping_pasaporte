@@ -21,10 +21,10 @@ spring:
           predicates:
             - Path=/DATA-MICRO/**
         - id: mediator-micro-serv
-          uri: lb://mediator-micro-serv
+          uri: lb:/MEDIATOR-MICRO-SERV
           predicates:
-            - Path=/mediator-micro-serv/**
+            - Path=/MEDIATOR-MICRO-SERV/**
         - id: web-scraping
-          uri: lb://web-scraping
+          uri: lb://WEB-SCRAPING
           predicates:
-            - Path=/web-scraping/**
+            - Path=/WEB-SCRAPING/**
