@@ -1,7 +1,8 @@
 package com.example.datamicroserv.controllers;
 
-import com.example.datamicroserv.models.ConsultasCitasPasaportes;
-import com.example.datamicroserv.repositories.ConsultasCitasPasaportesRepositories;
+
+import com.example.models.models.modelsDB.ConsultasCitasPasaportes;
+import com.example.models.repositories.ConsultasCitasPasaportesRepositories;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

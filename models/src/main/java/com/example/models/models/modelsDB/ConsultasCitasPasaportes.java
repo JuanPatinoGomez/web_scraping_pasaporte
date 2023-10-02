@@ -1,4 +1,4 @@
-package com.example.datamicroserv.models;
+package com.example.models.models.modelsDB;
 
 import jakarta.persistence.*;
 

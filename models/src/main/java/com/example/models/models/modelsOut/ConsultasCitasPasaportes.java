@@ -1,4 +1,4 @@
-package com.example.mediatormicroserv.models;
+package com.example.models.models.modelsOut;
 
 import java.time.LocalDate;
 

@@ -1,6 +1,6 @@
-package com.example.datamicroserv.repositories;
+package com.example.models.repositories;
 
-import com.example.datamicroserv.models.ConsultasCitasPasaportes;
+import com.example.models.models.modelsDB.ConsultasCitasPasaportes;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

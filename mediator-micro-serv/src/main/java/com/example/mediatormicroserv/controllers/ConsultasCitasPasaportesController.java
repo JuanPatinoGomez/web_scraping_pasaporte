@@ -1,6 +1,6 @@
 package com.example.mediatormicroserv.controllers;
 
-import com.example.mediatormicroserv.models.ConsultasCitasPasaportes;
+import com.example.models.models.modelsOut.ConsultasCitasPasaportes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
