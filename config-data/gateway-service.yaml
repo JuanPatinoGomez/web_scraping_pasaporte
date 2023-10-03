@@ -24,6 +24,10 @@ spring:
           uri: lb:/MEDIATOR-MICRO-SERV
           predicates:
             - Path=/MEDIATOR-MICRO-SERV/**
+        - id: automated-web-navigation
+          uri: lb:/AUTOMATED-WEB-NAVIGATION
+          predicates:
+            - Path=/AUTOMATED-WEB-NAVIGATION/**
         - id: web-scraping
           uri: lb://WEB-SCRAPING
           predicates:

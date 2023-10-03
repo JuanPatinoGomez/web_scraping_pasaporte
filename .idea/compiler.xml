@@ -9,6 +9,7 @@
         <module name="eureka-service" />
         <module name="models" />
         <module name="web-scraping-pasaportes" />
+        <module name="AutomatedWebNavigation" />
         <module name="config-service" />
         <module name="gateway-service" />
         <module name="mediator-micro-serv" />
@@ -16,6 +17,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="AutomatedWebNavigation" target="17" />
       <module name="config-service" target="17" />
       <module name="data-micro-serv" target="17" />
       <module name="eureka-service" target="17" />
@@ -27,6 +29,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="AutomatedWebNavigation" options="-parameters" />
       <module name="config-service" options="-parameters" />
       <module name="data-micro-serv" options="-parameters" />
       <module name="eureka-service" options="-parameters" />
