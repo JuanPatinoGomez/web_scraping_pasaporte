@@ -5,7 +5,7 @@ spring:
     config:
       server:
         git:
-          default-label: master #rama en la que se trabaja
+          default-label: microexcell #rama en la que se trabaja
           uri: https://github.com/JuanPatinoGomez/web_scraping_pasaporte.git #url del repositorio
           search-paths: config-data
   application:
