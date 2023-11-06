@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/gateway-service/pom.xml" />
         <option value="$PROJECT_DIR$/models/pom.xml" />
         <option value="$PROJECT_DIR$/AutomatedWebNavigation/pom.xml" />
+        <option value="$PROJECT_DIR$/excell-lector/pom.xml" />
       </list>
     </option>
   </component>

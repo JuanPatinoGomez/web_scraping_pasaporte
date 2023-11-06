@@ -11,6 +11,7 @@
         <module name="web-scraping-pasaportes" />
         <module name="AutomatedWebNavigation" />
         <module name="config-service" />
+        <module name="excell-lector" />
         <module name="gateway-service" />
         <module name="mediator-micro-serv" />
         <module name="data-micro-serv" />
@@ -21,6 +22,7 @@
       <module name="config-service" target="17" />
       <module name="data-micro-serv" target="17" />
       <module name="eureka-service" target="17" />
+      <module name="excell-lector" target="17" />
       <module name="gateway-service" target="17" />
       <module name="mediator-micro-serv" target="17" />
       <module name="models" target="17" />
@@ -33,6 +35,7 @@
       <module name="config-service" options="-parameters" />
       <module name="data-micro-serv" options="-parameters" />
       <module name="eureka-service" options="-parameters" />
+      <module name="excell-lector" options="-parameters" />
       <module name="gateway-service" options="-parameters" />
       <module name="mediator-micro-serv" options="-parameters" />
       <module name="models" options="-parameters" />
