@@ -1,24 +1,22 @@
-package com.example.models.models.modelsDB;
-
-import jakarta.persistence.*;
+package com.example.models.models.modelsOut;
 
 import java.time.LocalDate;
 
-@Entity
-@Table(name = "consultacitapasaporte")
-public class ConsultasCitasPasaportes {
+public class PersonasPasaportes {
+
     private int id;
     private String nombres;
     private String apellidos;
+    private String tipoDocumento;
+    private String numeroDocumento;
     private LocalDate fechaNacimiento;
     private LocalDate fechaExpedicionDocumento;
-    private String correo;
+    private String email;
     private String numeroCelular;
-    private Boolean indicadorHabilitado;
+    private String link;
+    private Boolean activo;
     private LocalDate fechaUltimaModificacion;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int getId() {
         return id;
     }
@@ -27,7 +25,6 @@ public class ConsultasCitasPasaportes {
         this.id = id;
     }
 
-    @Column(name = "nombres")
     public String getNombres() {
         return nombres;
     }
@@ -36,7 +33,22 @@ public class ConsultasCitasPasaportes {
         this.nombres = nombres;
     }
 
-    @Column(name = "apellidos")
+    public String getTipoDocumento() {
+        return tipoDocumento;
+    }
+
+    public void setTipoDocumento(String tipoDocumento) {
+        this.tipoDocumento = tipoDocumento;
+    }
+
+    public String getNumeroDocumento() {
+        return numeroDocumento;
+    }
+
+    public void setNumeroDocumento(String numeroDocumento) {
+        this.numeroDocumento = numeroDocumento;
+    }
+
     public String getApellidos() {
         return apellidos;
     }
@@ -45,7 +57,6 @@ public class ConsultasCitasPasaportes {
         this.apellidos = apellidos;
     }
 
-    @Column(name = "fechaNacimiento")
     public LocalDate getFechaNacimiento() {
         return fechaNacimiento;
     }
@@ -54,7 +65,6 @@ public class ConsultasCitasPasaportes {
         this.fechaNacimiento = fechaNacimiento;
     }
 
-    @Column(name = "fechaExpedicionDocumento")
     public LocalDate getFechaExpedicionDocumento() {
         return fechaExpedicionDocumento;
     }
@@ -63,16 +73,14 @@ public class ConsultasCitasPasaportes {
         this.fechaExpedicionDocumento = fechaExpedicionDocumento;
     }
 
-    @Column(name = "correo")
-    public String getCorreo() {
-        return correo;
+    public String getEmail() {
+        return email;
     }
 
-    public void setCorreo(String correo) {
-        this.correo = correo;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    @Column(name = "numeroCelular")
     public String getNumeroCelular() {
         return numeroCelular;
     }
@@ -81,16 +89,22 @@ public class ConsultasCitasPasaportes {
         this.numeroCelular = numeroCelular;
     }
 
-    @Column(name = "indicadorHabilitado")
-    public Boolean getIndicadorHabilitado() {
-        return indicadorHabilitado;
+    public String getLink() {
+        return link;
     }
 
-    public void setIndicadorHabilitado(Boolean indicadorHabilitado) {
-        this.indicadorHabilitado = indicadorHabilitado;
+    public void setLink(String link) {
+        this.link = link;
     }
 
-    @Column(name = "fechaUltimaModificacion")
+    public Boolean getActivo() {
+        return activo;
+    }
+
+    public void setActivo(Boolean activo) {
+        this.activo = activo;
+    }
+
     public LocalDate getFechaUltimaModificacion() {
         return fechaUltimaModificacion;
     }
