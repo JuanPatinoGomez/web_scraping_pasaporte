@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class DriverConfig {
 
-    @Bean
+    @Bean(destroyMethod = "quit")
     public WebDriver driver(){
         // Configura el controlador de Chrome
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Juan\\OneDrive\\Documents\\driver_google_chromer\\chromedriver-win64\\chromedriver.exe");

@@ -112,4 +112,22 @@ public class PersonasPasaportes {
     public void setFechaUltimaModificacion(LocalDate fechaUltimaModificacion) {
         this.fechaUltimaModificacion = fechaUltimaModificacion;
     }
+
+    @Override
+    public String toString() {
+        return "PersonasPasaportes{" +
+                "id=" + id +
+                ", nombres='" + nombres + '\'' +
+                ", apellidos='" + apellidos + '\'' +
+                ", tipoDocumento='" + tipoDocumento + '\'' +
+                ", numeroDocumento='" + numeroDocumento + '\'' +
+                ", fechaNacimiento=" + fechaNacimiento +
+                ", fechaExpedicionDocumento=" + fechaExpedicionDocumento +
+                ", email='" + email + '\'' +
+                ", numeroCelular='" + numeroCelular + '\'' +
+                ", link='" + link + '\'' +
+                ", activo=" + activo +
+                ", fechaUltimaModificacion=" + fechaUltimaModificacion +
+                '}';
+    }
 }

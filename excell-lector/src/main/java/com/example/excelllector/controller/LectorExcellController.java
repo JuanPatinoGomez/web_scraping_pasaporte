@@ -19,7 +19,7 @@ public class LectorExcellController {
 
         List<PersonasPasaportes> personasPasaportesList = new ArrayList<>();
         try {
-            FileInputStream fis = new FileInputStream(new File("C:\\Users\\Juan\\OneDrive\\Documents\\excell_pasaporte\\clientes_pasaporte.xlsx"));
+            FileInputStream fis = new FileInputStream("C:\\Users\\Juan\\OneDrive\\Documents\\excell_pasaporte\\clientes_pasaporte.xlsx");
             Workbook workbook = new XSSFWorkbook(fis); // Para archivos .xlsx
             Sheet sheet = workbook.getSheetAt(0); // Supongamos que es la primera hoja.
             //Formato para pasar las celdas numericas a string
@@ -28,13 +28,13 @@ public class LectorExcellController {
             Iterator<Row> rowIterator = sheet.rowIterator();
             rowIterator.next();
             Row row = rowIterator.next(); // para que no tome el encabezado
-            while(!(row.getCell(0).getStringCellValue().isEmpty())){ //Si tiene info que continue
+            while(row.getCell(0) != null && !(row.getCell(0).getStringCellValue().isEmpty())){ //Si tiene info que continue
                 PersonasPasaportes personasPasaportes = new PersonasPasaportes();
                 personasPasaportes.setNombres(row.getCell(0).getStringCellValue());
                 personasPasaportes.setApellidos(row.getCell(1).getStringCellValue());
                 personasPasaportes.setTipoDocumento(row.getCell(2).getStringCellValue());
-                personasPasaportes.setNumeroDocumento(dataFormatter.formatRawCellContents( row.getCell(3).getNumericCellValue(), -1, "@"));
-                personasPasaportes.setNumeroCelular(dataFormatter.formatRawCellContents( row.getCell(4).getNumericCellValue(), -1, "@"));
+                personasPasaportes.setNumeroDocumento(row.getCell(3).getCellType() == CellType.STRING ? row.getCell(3).getStringCellValue() : dataFormatter.formatRawCellContents( row.getCell(3).getNumericCellValue(), -1, "@"));
+                personasPasaportes.setNumeroCelular(row.getCell(4).getCellType() == CellType.STRING ? row.getCell(4).getStringCellValue() : dataFormatter.formatRawCellContents( row.getCell(4).getNumericCellValue(), -1, "@"));
                 personasPasaportes.setEmail(row.getCell(5).getStringCellValue());
                 personasPasaportesList.add(personasPasaportes);
 
@@ -55,13 +55,13 @@ public class LectorExcellController {
         //Formato para pasar las celdas numericas a string
         DataFormatter dataFormatter = new DataFormatter();
         try{
-            FileInputStream fis = new FileInputStream(new File("C:\\Users\\Juan\\OneDrive\\Documents\\excell_pasaporte\\clientes_pasaporte.xlsx"));
+            FileInputStream fis = new FileInputStream("C:\\Users\\Juan\\OneDrive\\Documents\\excell_pasaporte\\clientes_pasaporte.xlsx");
             Workbook workbook = new XSSFWorkbook(fis); // Para archivos .xlsx
             Sheet sheet = workbook.getSheetAt(0); // Supongamos que es la primera hoja.
             Iterator<Row> rowIterator = sheet.rowIterator();
             rowIterator.next();
             Row row = rowIterator.next(); // para que no tome el encabezado
-            while(!(row.getCell(0).getStringCellValue().isEmpty())){ //Si tiene info que continue
+            while(row.getCell(0) != null && !(row.getCell(0).getStringCellValue().isEmpty())){ //Si tiene info que continue
                 Cell celda = row.getCell(6);
                 // Establece el tipo de celda (por ejemplo, String o Numeric) y asigna el valor
                 celda.setCellValue(mapCedulaLink.get(dataFormatter.formatRawCellContents( row.getCell(3).getNumericCellValue(), -1, "@"))); //toma del mapa la cedula que tiene en la fila
